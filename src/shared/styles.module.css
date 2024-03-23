@@ -1,0 +1,46 @@
+@import '@csstools/normalize.css';
+@import './variables.css';
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+    display: block;
+}
+
+:global(body) {
+    font-family: Arial, Sans-Serif;
+    font-size: var(--font-size-base);
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    h3,
+    h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.reactLogo {
+    height: 48px;
+    vertical-align: middle;
+    width: 48px;
+}
+
+p,
+h {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
