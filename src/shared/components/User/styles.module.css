@@ -1,0 +1,62 @@
+@import '../../variables.css';
+
+.wrapper {
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1rem, 2rem, 3rem;
+    gap: 0.5rem;
+
+    grid-template-areas:
+               "name name"
+               'email email'
+               "posts albums";
+
+   border: 1px solid var(--hover-color);
+}
+
+.name,
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    grid-area: name;
+    margin: 0;
+}
+
+.email {
+    grid-area: email;
+}
+
+
+.albums,
+.posts {
+    border: 1px solid var(--color);
+    border-radius: 4px;
+    padding: 0.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--color);
+}
+
+.posts:hover,
+.albums:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.posts {
+  grid-area: posts;
+}
+
+.albums {
+    grid-area: albums;
+}
+
