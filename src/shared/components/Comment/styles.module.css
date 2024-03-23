@@ -1,0 +1,16 @@
+@import url('../../variables.css');
+
+.wrapper {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.title,
+.body {
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    color: var(--email-color)
+}
