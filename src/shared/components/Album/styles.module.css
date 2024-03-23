@@ -1,0 +1,40 @@
+@import url('../../variables.css');
+
+.wrapper {
+    padding: 0.5rem;
+    width: 12rem;
+    height: 6rem;
+
+    border: 1px solid var(--color);
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.body {
+    color: var(--color);
+}
+
+.owner {
+    color: var(--email-color);
+}
+
+.wrapper:hover {
+    border-color: var(--hover-color);
+}
+
+.wrapper:hover .body {
+    color: var(--hover-color);
+}
+
+.wrapper:hover .owner {
+    color: var(--hover-email-color);
+}
+
+.body {
+    margin-top: 0;
+    font-size: 1rem;
+}
