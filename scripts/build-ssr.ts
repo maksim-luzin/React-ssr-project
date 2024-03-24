@@ -1,3 +1,4 @@
+import { appendFile } from 'node:fs'
 import webpack from 'webpack';
 import rimraf from 'rimraf';
 import chalk from 'chalk';
@@ -85,6 +86,7 @@ const build = async () => {
         await serverPromise;
         await clientPromise;
         await generateStaticHTML();
+        appendFile('./build/server/server.js', 'module.exports = app;', () => { })
         logMessage('Done!', 'info');
     } catch (error) {
         logMessage(error, 'error');

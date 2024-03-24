@@ -1,4 +1,5 @@
 import path from 'path';
+import Dotenv from 'dotenv-webpack';
 import webpack from 'webpack';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -23,6 +24,7 @@ export const shared = [
         chunkFilename: isDev() ? '[id].css' : '[id].[contenthash].css',
     }),
     new CaseSensitivePathsPlugin(),
+    new Dotenv()
 ];
 
 export const client = [
@@ -51,6 +53,7 @@ export const client = [
             sockIntegration: 'whm',
         },
     }),
+    new Dotenv()
 ].filter(Boolean);
 
 export const server = [
@@ -58,6 +61,7 @@ export const server = [
         __SERVER__: 'true',
         __BROWSER__: 'false',
     }),
+    new Dotenv()
 ];
 
 export default {

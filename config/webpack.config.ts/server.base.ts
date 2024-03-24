@@ -28,6 +28,7 @@ export default {
         filename: 'server.js',
         publicPath: paths.publicPath,
         // libraryTarget: 'commonjs2',
+        library: "app",
     },
     resolve: { ...resolvers },
     module: {

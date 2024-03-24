@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "react-ssr-app",
+  "devCommand": "node build/server/server.js",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "build/**"
+    }
+  }
+}
